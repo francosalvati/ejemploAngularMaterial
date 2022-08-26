@@ -1,0 +1,17 @@
+mat-card{
+    margin-top: 10px;
+}
+
+.ancho{
+    width: 90%;
+}
+#programmer{
+    width: 250px;
+    height: 250px;
+}
+
+.ancho-btn{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}

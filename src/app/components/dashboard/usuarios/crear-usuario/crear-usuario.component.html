@@ -1,0 +1,54 @@
+<div class="container">
+    <mat-toolbar>
+        <span>Crear Usuario</span>
+    </mat-toolbar>
+
+    <mat-card>
+
+        <form [formGroup]="form" (ngSubmit) = "agregarUsuario()">
+            <mat-grid-list cols="4" rowHeight="70px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field appearance="fill" class="ancho">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput autocomplete="off" formControlName="usuario">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="3" [rowspan]="5" [style.background]="'#aaa'">
+                    <img src="./assets/img/programmer.png" id="programmer">
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field appearance="fill" class="ancho">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput autocomplete="off" formControlName="nombre">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field appearance="fill" class="ancho">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput autocomplete="off" formControlName="apellido">
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field appearance="fill" class="ancho">
+                        <mat-label>Sexo</mat-label>
+                        <mat-select formControlName="sexo">
+                            <mat-option *ngFor="let item of sexo" [value]="item"> {{item}} </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <div class="ancho-btn">
+                        <button mat-raised-button>borrar</button>
+                        <button type="submit" [disabled]="form.invalid" mat-raised-button color="accent">agregar</button>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+
+</div>
